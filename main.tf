@@ -2,15 +2,18 @@
 provider "aws" {
   region = "us-west-2"  # Change to your preferred region
 }
+resource "aws_instance" "my_ec2_instance" {
+  ami           = "ami-0522ab6e1ddcc7055"  # Replace with your desired AMI ID
+  instance_type = "t2.micro"      # Change to your desired instance type
 
-# Create an S3 bucket
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "buckityyy"  # Replace with a unique bucket name
-  
+  key_name      = "jenkins-keypair"  # Replace with your key pair name
+
+  security_groups = ["your-security-group"]  # Replace with your security group name
+
   tags = {
-    Name        = "My S3 Bucket1"
-    Environment = "Dev"
+    Name = "MyEC2Instance"
   }
 }
+
 
 
