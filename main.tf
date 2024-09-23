@@ -5,10 +5,10 @@ provider "aws" {
 
 # Create an S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "buckityy"  # Replace with a unique bucket name
+  bucket = "buckityyy"  # Replace with a unique bucket name
   
   tags = {
-    Name        = "My S3 Bucket"
+    Name        = "My S3 Bucket1"
     Environment = "Dev"
   }
 }
