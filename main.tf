@@ -7,9 +7,6 @@ resource "aws_instance" "my_ec2_instance" {
   instance_type = "t2.micro"      # Change to your desired instance type
 
   key_name      = "jenkins-keypair"  # Replace with your key pair name
-
-  security_groups = ["your-security-group"]  # Replace with your security group name
-
   tags = {
     Name = "MyEC2Instance"
   }
