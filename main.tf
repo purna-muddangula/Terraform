@@ -1,6 +1,6 @@
 # Define the provider
 provider "aws" {
-  region = "us-west-2"  # Change to your preferred region
+  region = "ap-south-1"  # Change to your preferred region
 }
 resource "aws_instance" "my_ec2_instance" {
   ami           = "ami-0522ab6e1ddcc7055"  # Replace with your desired AMI ID
